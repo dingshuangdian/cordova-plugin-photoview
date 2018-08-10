@@ -1,9 +1,9 @@
 {
-  "name": "PhotoView",
+  "name": "cordova-plugin-photoview",
   "version": "1.0.0",
   "description": "",
   "cordova": {
-    "id": "PhotoView",
+    "id": "cordova-plugin-photoview",
     "platforms": []
   },
   "keywords": [
