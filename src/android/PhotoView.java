@@ -45,4 +45,6 @@ public class PhotoView extends CordovaPlugin {
     }
     return true;
   }
+
+
 }

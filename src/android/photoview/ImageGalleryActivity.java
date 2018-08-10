@@ -7,8 +7,10 @@ import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+
 import java.util.ArrayList;
 import java.util.List;
+
 public class ImageGalleryActivity extends FragmentActivity {
   private List<String> imgUrls; //图片列表
   private Button headBackBtn;
