@@ -10,21 +10,22 @@
 				<param name="android-package" value="photoview.PhotoView"/>
 			</feature>
 		</config-file>
-		<config-file target="AndroidManifest.xml" parent="/manifest">
+		<config-file target="AndroidManifest.xml" parent="/manifest/application" mode="merge">
+		<activity android:name="photoview.ImageGalleryActivity"></activity>
 		</config-file>
-		<source-file src = "src/android/PhotoView.java" target-dir="src/photoview"/>
-		<source-file src = "src/android/photoview/ImageGalleryActivity.java" target-dir="src/photoview/photoview"/>
-		<source-file src = "src/android/photoview/Info.java" target-dir="src/photoview/photoview"/>
-		<source-file src = "src/android/photoview/PhotoView.java" target-dir="src/photoview/photoview"/>
-		<source-file src = "src/android/photoview/PhotoViewAdapter.java" target-dir="src/photoview/photoview"/>
-		<source-file src = "src/android/photoview/PhotoViewWrapper.java" target-dir="src/photoview/photoview"/>
+		<source-file src = "src/android/PhotoView.java" target-dir="app/src/main/java/photoview/photoview"/>
+		<source-file src = "src/android/photoview/ImageGalleryActivity.java" target-dir="app/src/main/java/photoview"/>
+		<source-file src = "src/android/photoview/Info.java" target-dir="app/src/main/java/photoview"/>
+		<source-file src = "src/android/photoview/PhotoView.java" target-dir="app/src/main/java/photoview"/>
+		<source-file src = "src/android/photoview/PhotoViewAdapter.java" target-dir="app/src/main/java/photoview"/>
+		<source-file src = "src/android/photoview/PhotoViewWrapper.java" target-dir="app/src/main/java/photoview"/>
 		
-		<source-file src = "src/android/xml/activity_touch_gallery.xml" target-dir="res/layout"/>
-		<source-file src = "src/android/xml/layout_main_header.xml" target-dir="res/layout"/>
-		<source-file src = "src/android/xml/photo_view_zoom_progress.xml" target-dir="res/layout"/>
+		<resource-file src = "src/android/xml/activity_touch_gallery.xml" target="res/layout"/>
+		<resource-file src = "src/android/xml/layout_main_header.xml" target="res/layout"/>
+		<resource-file src = "src/android/xml/photo_view_zoom_progress.xml" target="res/layout"/>
 		
-		<source-file src = "src/android/xml/btn_back_normal.9.png" target-dir="res/drawable-hdpi"/>
-		<source-file src = "src/android/xml/default_image.png" target-dir="res/drawable-hdpi"/>
+		<resource-file src = "src/android/xml/back.png" target="res/drawable-hdpi"/>
+		<resource-file src = "src/android/xml/default_image.png" target="res/drawable-hdpi"/>
 	
 		<framework src="src/android/photoview.gradle" custom="true" type="gradleReference" />
 	</platform>

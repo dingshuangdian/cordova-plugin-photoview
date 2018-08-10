@@ -1,4 +1,4 @@
-package photoview.photoview;
+package photoview;
 
 import android.content.Intent;
 import android.os.Bundle;

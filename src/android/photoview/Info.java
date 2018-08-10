@@ -1,4 +1,4 @@
-package photoview.photoview;
+package photoview;
 
 import android.graphics.RectF;
 import android.widget.ImageView;

@@ -1,4 +1,4 @@
-package photoview.photoview;
+package photoview;
 
 import android.content.Context;
 import android.graphics.Canvas;
