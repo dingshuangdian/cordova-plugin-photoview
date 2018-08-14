@@ -15,6 +15,8 @@ public class ImageGalleryActivity extends FragmentActivity {
   private List<String> imgUrls; //图片列表
   private Button headBackBtn;
   private ViewPager mViewPager;
+  private String flag;
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -24,8 +26,9 @@ public class ImageGalleryActivity extends FragmentActivity {
       WindowManager.LayoutParams.FLAG_FULLSCREEN);*/
     setContentView(this.getResources().getIdentifier("activity_touch_gallery",
       "layout", this.getPackageName()));
+    imgUrls = DataHolder.getInstance().getData();
     Intent intent = getIntent();
-    imgUrls = intent.getStringArrayListExtra("images");
+    flag = intent.getStringExtra("flag");
     if (imgUrls == null) {
       imgUrls = new ArrayList<>();
     }
@@ -36,6 +39,7 @@ public class ImageGalleryActivity extends FragmentActivity {
 
   private void initView() {
     headBackBtn = findViewById(this.getResources().getIdentifier("btnBack", "id", this.getPackageName()));
+
     headBackBtn.setVisibility(View.VISIBLE);
   }
 
@@ -52,6 +56,7 @@ public class ImageGalleryActivity extends FragmentActivity {
       }
     });
   }
+
   private void initGalleryViewPager() {
     PhotoViewAdapter pagerAdapter = new PhotoViewAdapter(this, imgUrls);
     pagerAdapter.setOnItemChangeListener(new PhotoViewAdapter.OnItemChangeListener() {
@@ -63,6 +68,7 @@ public class ImageGalleryActivity extends FragmentActivity {
     mViewPager = findViewById(this.getResources().getIdentifier("viewer", "id", this.getPackageName()));
     mViewPager.setOffscreenPageLimit(3);
     mViewPager.setAdapter(pagerAdapter);
+    mViewPager.setCurrentItem(Integer.parseInt(flag));
   }
 
 }

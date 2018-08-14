@@ -1,6 +1,6 @@
 {
   "name": "easton-plugin-photoview",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "cordova": {
     "id": "easton-plugin-photoview",
